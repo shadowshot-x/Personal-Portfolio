@@ -1,0 +1,117 @@
+<body>
+
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#start">Ujjwal Sharma</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="nav-about"><a href="#abouts">About</a></li>
+            <li id="nav-portfolio"><a href="#portfolios">Portfolio</a></li>
+            <li id="nav-contact"><a href="#revs">Reviews</a></li>
+            <li id="nav-contact"><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container-fluid" id="start">
+ <h1 class="text-center text-primary"> Personal Portfolio </h1>
+</div>
+
+<div class="container about" id="abouts">
+  <h2 class="text-center">About Me</h2>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="https://imgur.com/hXhJ3ul.jpg" alt="myphoto" class="img-circle text-center profile-img"><br>
+      <p class="my-text text-center">I'm a self taught web developer from India. I am doing my B.Tech from Abv-IIITM Gwalior. For now I'm having fun learning the basics!</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <p>Here are some of my Top Skills</p>
+      <div class="col-xs-6">
+                <ul>
+                  <li>Node.js</li>
+                  <li>Javascript</li>                  
+                  <li>Django</li> 
+                  <li>JQuery</li>                 
+                  <li>Bootstrap</li>                 
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <ul>
+                  <li>C++</li> 
+                  <li>Mongo</li>
+                  <li>Git</li>
+                  <li>WordPress</li>
+                  <li>Canva</li>
+                </ul>
+              </div>
+    </div>
+  </div>
+</div>
+
+<div class="container portfolio" id="portfolios">
+  <h3><Center>Portfolio</Center></h3>
+  <div class="col-md-6 text-center">
+      <h4>The Survey Form</h4>
+      <p>Just a general survey form of a Tv Series with some added css animations</p>
+      <a class="btn btn-primary btn-rounded" href="https://codepen.io/ujjwal_sharma/pen/wEQMwK">View</a>
+  </div>
+  <div class="col-md-6">
+  
+  </div>
+
+</div>
+
+
+
+<div class="container" id="revs">
+  <form action="/collection1" method="POST" class="well">
+    <h4>You can add Your reviews Here</h4>
+    <div class="row">
+    <span class="col-xs-3"><input type="text" placeholder=" Name " name="name" id="input1"></span>
+    <span class="col-xs-9"><input type="text" placeholder=" Review" name="quote" size="50px" id="input2"></span>
+    </div>
+   <button type="submit" class="btn btn-primary"><i class="fa fa-thumbs-up"><nbsp>Submit</i></button>
+    
+  </form>
+ </div>
+
+<div class="container">
+<ul class="collection1 well">
+        
+    <% for(var i=collection1.length-5; i<collection1.length ; i++) { %>
+      <li class="collection1 li1">
+       <b><i> <span class="names text text-uppercase"><%= collection1[i].name %></span></b></i> <br>
+      <i><span class="reviews"> review : <%= collection1[i].quote %></span></i>
+      </li>
+    <% } %>
+  </ul>
+</div>
+
+<div id="contact" class="row cover bottom">
+        <h2 class="text-center contact-header">Contact Me</h2>
+        <p class="text-center contact-email">Get in touch with me <span class="glyphicon glyphicon-arrow-right"></span> ujjwal26599@gmail.com</p>
+        <div class="text-center contact-social-icons">
+          <p>Or find me on:</p>
+          <ul class="centered">
+            <a href="https://codepen.io/ujjwal_sharma/"><li><i class="fa fa-codepen"></i> CodePen</li></a>
+            <a href="https://www.linkedin.com/in/ujjwal-sharma-b1066414b/"><li><i class="fa fa-linkedin-square"></i> LinkedIn</li></a>
+            <a href="https://github.com/shadowshot-x"><li><i class="fa fa-github"></i> Github</li></a>
+            <a href="https://www.freecodecamp.org/ujjwal_26"><li>(<i class="fa fa-fire"></i>) FreeCodeCamp</li></a>
+          </ul>
+        </p>
+        
+      </div><!-- End #Contact -->
+
+    </div>
+
+<script src="main.js"></script>
+</body>
